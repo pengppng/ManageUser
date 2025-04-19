@@ -1,0 +1,35 @@
+<h1 class="page-title">Documents</h1>
+<app-toolsbar-dashboard></app-toolsbar-dashboard>
+<div class="documents-list-container">
+    <h2 class="list-title">List Documents</h2>
+    <div class="table-container">
+      <table class="documents-table">
+        <thead>
+          <tr>
+            <th>Document</th>
+            <th>Description</th>
+            <th class="action-column">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let document of documents" class="document-row">
+            <td class="document-info">
+              <div class="document-name">{{ document.name }}</div>
+              <div class="document-date">{{ document.createdAt }}</div>
+            </td>
+            <td class="document-description">
+              {{ (document.description.length > 100) ? (document.description | slice:0:100) + '...' : document.description }}
+            </td>
+            <td class="action-buttons">
+              <button class="edit-button">
+                <lucide-angular [img]="Pencil"></lucide-angular>
+              </button>
+              <button class="delete-button">
+                <lucide-angular [img]="Trash2"></lucide-angular>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

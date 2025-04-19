@@ -1,0 +1,24 @@
+/*:host {
+    max-width: 1280px;
+    padding: 2rem;
+    text-align: center;
+}
+
+th, td {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+table {
+    margin: 0 auto;
+}
+*/
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+.full-width {
+  margin-left: 0;
+}

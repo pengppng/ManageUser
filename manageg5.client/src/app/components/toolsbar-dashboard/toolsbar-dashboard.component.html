@@ -1,0 +1,49 @@
+<div class="toolbar-container">
+    <div class="search-container">
+      <div class="search-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </div>
+      <input 
+        type="text" 
+        placeholder="Search..." 
+        class="search-input"
+       >
+    </div>
+    
+    <div class="actions-container">
+      <button class="add-user-btn badge-default">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5v14M5 12h14"></path>
+        </svg>
+        Add User
+      </button>
+      
+      <div class="sort-container">
+        <div class="sort-label">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 5h10M11 9h5M11 13h2M3 17h18M3 5l4 4M7 5v10"></path>
+          </svg>
+          Sort by:
+        </div>
+        <div class="dropdown">
+          <button class="dropdown-toggle">
+            {{ selectedSort }}
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="dropdown-menu">
+            <div 
+              class="dropdown-item" 
+              *ngFor="let option of sortOptions"
+            >
+              {{ option }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

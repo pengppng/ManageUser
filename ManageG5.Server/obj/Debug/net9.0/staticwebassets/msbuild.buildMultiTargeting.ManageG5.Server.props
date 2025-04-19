@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ManageG5.Server.props" />
+</Project>

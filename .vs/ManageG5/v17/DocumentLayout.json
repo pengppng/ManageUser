@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\gofive\\tryonce\\ManageG5\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|d:\\gofive\\tryonce\\manageg5\\manageg5.client\\src\\app\\app-routing.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|solutionrelative:manageg5.client\\src\\app\\app-routing.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|d:\\gofive\\tryonce\\manageg5\\manageg5.client\\src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|solutionrelative:manageg5.client\\src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|d:\\gofive\\tryonce\\manageg5\\manageg5.client\\src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|solutionrelative:manageg5.client\\src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "app-routing.module.ts",
+              "DocumentMoniker": "D:\\gofive\\tryonce\\ManageG5\\manageg5.client\\src\\app\\app-routing.module.ts",
+              "RelativeDocumentMoniker": "manageg5.client\\src\\app\\app-routing.module.ts",
+              "ToolTip": "D:\\gofive\\tryonce\\ManageG5\\manageg5.client\\src\\app\\app-routing.module.ts",
+              "RelativeToolTip": "manageg5.client\\src\\app\\app-routing.module.ts",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-19T18:15:09.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "app.module.ts",
+              "DocumentMoniker": "D:\\gofive\\tryonce\\ManageG5\\manageg5.client\\src\\app\\app.module.ts",
+              "RelativeDocumentMoniker": "manageg5.client\\src\\app\\app.module.ts",
+              "ToolTip": "D:\\gofive\\tryonce\\ManageG5\\manageg5.client\\src\\app\\app.module.ts",
+              "RelativeToolTip": "manageg5.client\\src\\app\\app.module.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-19T18:13:52.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "app.component.ts",
+              "DocumentMoniker": "D:\\gofive\\tryonce\\ManageG5\\manageg5.client\\src\\app\\app.component.ts",
+              "RelativeDocumentMoniker": "manageg5.client\\src\\app\\app.component.ts",
+              "ToolTip": "D:\\gofive\\tryonce\\ManageG5\\manageg5.client\\src\\app\\app.component.ts",
+              "RelativeToolTip": "manageg5.client\\src\\app\\app.component.ts",
+              "ViewState": "AgIAACoAAAAAAAAAAAAkwEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-19T18:13:16.978Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #ffffff;
+    color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push sign-out to the bottom */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+  
+  .logo-container {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .company-name {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+    color: #1e1e1e;
+  }
+  
+  .nav-menu {
+    flex-grow: 1;
+    padding-top: 20px;
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-menu li {
+    margin-bottom: 5px;
+  }
+  
+  .nav-menu a,
+  .signout-button a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #1e1e1e;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+  }
+  
+  .nav-menu a:hover,
+  .signout-button a:hover {
+    background-color: #3498db;
+    color: #ffffff;
+  }
+  
+  .nav-menu li.active a {
+    background-color: #3498db;
+    color: #ffffff;
+  }
+  
+  .icon {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .signout-button {
+    padding: 20px;
+    border-top: 1px solid #e0e0e0;
+  }
+  

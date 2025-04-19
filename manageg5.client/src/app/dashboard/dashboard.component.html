@@ -1,0 +1,42 @@
+<h1 class="page-title">Users Dashboard</h1>
+<app-toolsbar-dashboard></app-toolsbar-dashboard>
+<div class="users-list-container">
+    <h2 class="list-title">List Users</h2>
+    <div class="table-container">
+      <table class="users-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Create Date</th>
+            <th>Role</th>
+            <th class="action-column">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users" class="user-row">
+            <td class="user-info">
+              <div class="user-name">{{ user.name }}</div>
+              <div class="user-email">{{ user.email }}</div>
+            </td>
+            <td>{{ user.createdAt }}</td>
+            <td>
+              <span
+                class="badge"
+                [ngClass]="getBadgeColor(user.role)"
+              >
+                {{ user.role.name }}
+              </span>
+            </td>
+            <td class="action-buttons">
+              <button class="edit-button">
+                <lucide-angular [img]="Pencil"></lucide-angular>
+              </button>
+              <button class="delete-button">
+                <lucide-angular [img]="Trash2"></lucide-angular>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

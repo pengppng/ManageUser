@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "ManageG5.Server\\ManageG5.Server.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "manageg5.client\\manageg5.client.esproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
