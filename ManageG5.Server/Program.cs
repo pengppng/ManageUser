@@ -26,3 +26,4 @@ app.MapControllers();
 app.MapFallbackToFile("/index.html");
 
 app.Run();
+Console.WriteLine("Application started.");

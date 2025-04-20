@@ -12,7 +12,7 @@ export interface Permission {
   providedIn: 'root'
 })
 export class PermissionService {
-  private apiUrl = 'https://localhost:5296/api/v1/permission'; // use your real backend URL
+  private apiUrl = 'https://localhost:5200/api/v1/permission'; // use your real backend URL
 
   constructor(private http: HttpClient) {}
 

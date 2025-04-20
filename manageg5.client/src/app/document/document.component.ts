@@ -7,6 +7,7 @@ import { DocumentServiceService } from '../services/document.service';
 
 @Component({
   selector: 'app-document',
+  standalone: true,
   imports: [CommonModule, ToolsbarDashboardComponent, LucideAngularModule],
   templateUrl: './document.component.html',
   styleUrl: './document.component.css'

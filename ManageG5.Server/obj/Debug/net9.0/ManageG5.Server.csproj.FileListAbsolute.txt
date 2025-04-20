@@ -35,3 +35,4 @@ D:\gofive\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\refint\ManageG5.Serv
 D:\gofive\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\ManageG5.Server.pdb
 D:\gofive\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\ManageG5.Server.genruntimeconfig.cache
 D:\gofive\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\ref\ManageG5.Server.dll
+D:\gofive\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\ManageG5.Server.sourcelink.json
