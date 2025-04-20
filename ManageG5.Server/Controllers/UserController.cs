@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
-using ManageG5.Server;
 using Microsoft.AspNetCore.Mvc;
+using ManageG5.Server.Models;
 
 namespace ManageG5.Server.Controllers
 {

@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ConfigService {
-  BASE_API = "http://localhost:5200/api/v1"
+  //BASE_API = "http://localhost:5200/api/v1"
+  BASE_API = "/api/v1";
   constructor(private httpCli: HttpClient) {}
 
   get<T>(subPath: string): Observable<T> {

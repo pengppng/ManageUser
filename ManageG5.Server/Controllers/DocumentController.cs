@@ -1,4 +1,4 @@
-﻿using ManageG5.Server;
+﻿using ManageG5.Server.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ManageG5.Server.Controllers

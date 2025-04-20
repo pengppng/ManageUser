@@ -1,5 +1,6 @@
 ﻿using ManageG5.Server;
 using Microsoft.AspNetCore.Mvc;
+using ManageG5.Server.Models;   
 
 namespace ManageSystemAPI.Controllers
 {
