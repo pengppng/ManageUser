@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ManageG5.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18d1f65bcab0acc6f43ac65413328827ea8a444b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b6dfaec9319e375f3786a8ac9854c89cdeeac92")]
 [assembly: System.Reflection.AssemblyProductAttribute("ManageG5.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ManageG5.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
