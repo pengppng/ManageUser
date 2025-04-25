@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:60581",
 "RedirectUrl": "",
 "LaunchCommand": "npm start",
-"WorkingDirectory": "D:\\gofive\\tryonce\\ManageG5\\ManageG5.Server\\..\\manageg5.client",
+"WorkingDirectory": "D:\\gofive\\first\\tryonce\\ManageG5\\ManageG5.Server\\..\\manageg5.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }

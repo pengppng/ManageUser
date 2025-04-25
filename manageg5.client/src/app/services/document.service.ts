@@ -6,7 +6,7 @@ import { Document } from '../models/document.model';
 @Injectable({
   providedIn: 'root'
 })
-export class DocumentServiceService {
+export class DocumentService {
 
   constructor(private configService: ConfigService) { }
 

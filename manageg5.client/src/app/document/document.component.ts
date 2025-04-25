@@ -3,7 +3,7 @@ import { LucideAngularModule, Pencil, Trash2 } from 'lucide-angular';
 import { ToolsbarDashboardComponent } from '../components/toolsbar-dashboard/toolsbar-dashboard.component';
 import { CommonModule } from '@angular/common';
 import { Document } from '../models/document.model';
-import { DocumentServiceService } from '../services/document.service';
+import { DocumentService } from '../services/document.service';
 
 @Component({
   selector: 'app-document',
@@ -18,7 +18,7 @@ export class DocumentComponent {
 
   documents: Document[] = [];
 
-  constructor(private documentsService: DocumentServiceService) {}
+  constructor(private documentsService: DocumentService) {}
 
   ngOnInit(): void {
     this.documentsService.getDocuments().subscribe((data: Document[]) => {

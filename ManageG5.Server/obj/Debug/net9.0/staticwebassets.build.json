@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "rYHIa9B2sVuhZXgDs0DRa3v0SuFqwMB1ZMN1O8PBytU=",
+  "Hash": "2VA8xnLd89JlG2ESPHSoLtEw1yZxTYSzjBcZnW0m33o=",
   "Source": "ManageG5.Server",
   "BasePath": "_content/ManageG5.Server",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "D:\\gofive\\tryonce\\ManageG5\\manageg5.client\\manageg5.client.esproj",
+      "Identity": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\manageg5.client.esproj",
       "Version": 2,
       "Source": "manageg5.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
