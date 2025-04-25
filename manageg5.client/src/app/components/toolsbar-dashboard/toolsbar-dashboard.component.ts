@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-toolsbar-dashboard',
-  standalone: true,
+  // standalone: true,
   imports: [CommonModule],
   templateUrl: './toolsbar-dashboard.component.html',
   styleUrl: './toolsbar-dashboard.component.css'

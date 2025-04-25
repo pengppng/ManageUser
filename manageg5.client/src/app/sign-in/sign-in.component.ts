@@ -7,7 +7,7 @@ import { AuthServiceService } from '../services/auth.service';
 @Component({
   selector: 'app-sign-in',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule,CommonModule],
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.css']
 })
@@ -17,6 +17,9 @@ export class SignInComponent {
   loading = false;
   errorMessage = '';
 
+  ngOnInit() {
+    console.log('SingIn on');}
+  
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthServiceService,

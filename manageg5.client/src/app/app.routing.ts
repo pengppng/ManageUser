@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuardService } from './services/auth.guard.service';
 
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: "",
     pathMatch: 'full',
@@ -28,9 +28,3 @@ const routes: Routes = [
   },
   { path: '**', redirectTo: '/sign-in' }
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }

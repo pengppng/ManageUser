@@ -7,7 +7,7 @@ import { ToolsbarDashboardComponent } from '../components/toolsbar-dashboard/too
 
 @Component({
   selector: 'app-dashboard',
-  standalone: true,
+  // standalone: true,
   imports: [CommonModule, ToolsbarDashboardComponent, LucideAngularModule],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
