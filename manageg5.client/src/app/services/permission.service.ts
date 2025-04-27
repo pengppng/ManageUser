@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+//import { environment } from '../environments/environment';
 
 export interface Permission {
   id: string;
@@ -12,9 +13,9 @@ export interface Permission {
   providedIn: 'root'
 })
 export class PermissionService {
-  private apiUrl = 'https://localhost:5200/api/v1/permission'; // use your real backend URL
+  private apiUrl = 'https://localhost:7093';// use your real backend URL
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getPermissions(): Observable<Permission[]> {
     return this.http.get<Permission[]>(this.apiUrl);

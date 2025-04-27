@@ -4,7 +4,7 @@ using ManageG5.Server.Models;
 
 namespace ManageSystemAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class PermissionController : ControllerBase
     {

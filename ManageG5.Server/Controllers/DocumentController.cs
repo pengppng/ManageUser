@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ManageG5.Server.Controllers
 {
+    [Route("api/v1/[controller]")]
+    [ApiController]
     public class DocumentController : Controller
     {
         private static List<Document> documents = new List<Document>();

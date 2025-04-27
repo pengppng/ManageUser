@@ -1,8 +1,9 @@
+/// <reference path="../services/auth.service.ts" />
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthServiceService } from '../services/auth.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -22,7 +23,7 @@ export class SignInComponent {
   
   constructor(
     private formBuilder: FormBuilder,
-    private authService: AuthServiceService,
+    private authService: AuthService,
     private router: Router
   ) {
     this.loginForm = this.formBuilder.group({

@@ -329,10 +329,10 @@ D:\gofive\first\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\staticwebasset
 D:\gofive\first\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.ManageG5.Server.props
 D:\gofive\first\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.ManageG5.Server.props
 D:\gofive\first\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\staticwebassets.pack.json
-D:\gofive\first\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 D:\gofive\first\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\ManageG5.D6142B10.Up2Date
 D:\gofive\first\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\ManageG5.Server.dll
 D:\gofive\first\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\refint\ManageG5.Server.dll
 D:\gofive\first\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\ManageG5.Server.pdb
 D:\gofive\first\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\ManageG5.Server.genruntimeconfig.cache
 D:\gofive\first\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\ref\ManageG5.Server.dll
+D:\gofive\first\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

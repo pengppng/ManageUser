@@ -4,7 +4,7 @@ using ManageG5.Server.Models;
 
 namespace ManageG5.Server.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]s")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -14,6 +14,8 @@ namespace ManageG5.Server.Controllers
         [HttpGet]
         public IActionResult GetUsers()
         {
+            users.Add(new User { Username = "inaHogan007", Id ="admin",Email = "aa@ggg.com",PhoneNumber="",Role = new Role() { Name = "Admin", Description ="" }, RoleId ="1",Name = "",  });
+       
             return Ok(users);
         }
 

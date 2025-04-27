@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LucideAngularModule, Trash2, Pencil } from 'lucide-angular';
 import { User } from '../models/user.model';
-import { UserServiceService } from '../services/user.service';
+import { UserService } from '../services/user.service';
 import { ToolsbarDashboardComponent } from '../components/toolsbar-dashboard/toolsbar-dashboard.component';
 
 @Component({
@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
 
   users: User[] = [];
 
-  constructor(private userService: UserServiceService) {}
+  constructor(private userService: UserService) {}
 
   ngOnInit(): void {
     this.userService.getUsers().subscribe((data: User[]) => {

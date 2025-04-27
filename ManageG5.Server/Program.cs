@@ -1,3 +1,6 @@
+//using ManageG5Db.API.DAta;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,7 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+//builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(Action => Action.AddDefaultPolicy(config => config.AllowAnyOrigin()));
 var app = builder.Build();
 
 app.UseDefaultFiles();
@@ -15,9 +20,14 @@ app.MapStaticAssets();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    //app.UseSwagger();
+    //app.UseSwaggerUI();
 }
 
+// config HTTP request pipeline
 app.UseHttpsRedirection();
+
+app.UseCors();
 
 app.UseAuthorization();
 

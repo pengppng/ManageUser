@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, catchError, map, Observable, throwError } from 'rxjs';
 import { User } from '../models/user.model';
-import { UserServiceService } from './user.service';
+import { UserService } from './user.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthServiceService {
+export class AuthService {
   private currentUserSubject = new BehaviorSubject<User | null>(null);
   public currentUser$ = this.currentUserSubject.asObservable();
   
   private isAuthenticatedSubject = new BehaviorSubject<boolean>(this.hasToken());
   public isAuthenticated$ = this.isAuthenticatedSubject.asObservable();
 
-  constructor(private userService: UserServiceService) {
+  constructor(private userService: UserService) {
     const storedUser = localStorage.getItem('currentUser');
     if (storedUser) {
       this.currentUserSubject.next(JSON.parse(storedUser));
@@ -51,7 +51,7 @@ export class AuthServiceService {
   }
 
   logout(): void {
-    localStorage.removeItem('currentUser');
+    localStorage.removeItem('currentUser'); // last value from
     localStorage.removeItem('auth_token');
     this.currentUserSubject.next(null);
     this.isAuthenticatedSubject.next(false);
