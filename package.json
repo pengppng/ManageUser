@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@angular/material": "^19.2.11",
     "lucide-angular": "^0.501.0"
   }
 }
