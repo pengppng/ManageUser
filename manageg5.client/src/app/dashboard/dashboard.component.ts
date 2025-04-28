@@ -37,7 +37,7 @@ export class DashboardComponent implements OnInit {
     dialogRef.afterClosed().subscribe((result: User) => {
       if (result) {
         console.log('New user added:', result);
-        this.users.push(result); // << เพิ่ม user ใหม่เข้าตาราง
+        this.users.push(result);
       }
     });
   }

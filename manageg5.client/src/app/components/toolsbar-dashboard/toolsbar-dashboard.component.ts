@@ -17,8 +17,6 @@ import { DialogAddComponent } from './dialog-add/dialog-add.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
-
-
 export class ToolsbarDashboardComponent {
   sortOptions = ['Name', 'Date', 'Status'];
   selectedSort = 'Name';
