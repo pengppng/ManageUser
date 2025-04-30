@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { LucideAngularModule, Pencil, Trash2 } from 'lucide-angular';
-import { ToolsbarDashboardComponent } from '../components/toolsbar-dashboard/toolsbar-dashboard.component';
+import { DocumentToolbarComponent } from '../components/toolbar-document/toolbar-document.component';
 import { CommonModule } from '@angular/common';
 import { Document } from '../models/document.model';
 import { DocumentService } from '../services/document.service';
@@ -8,7 +8,7 @@ import { DocumentService } from '../services/document.service';
 @Component({
   selector: 'app-document',
   // standalone: true,
-  imports: [CommonModule, ToolsbarDashboardComponent, LucideAngularModule],
+  imports: [CommonModule, DocumentToolbarComponent, LucideAngularModule],
   templateUrl: './document.component.html',
   styleUrl: './document.component.css'
 })

@@ -1,0 +1,46 @@
+<!-- toolbar.component.html -->
+<div class="toolbar-container">
+    <!-- Search -->
+    <div class="search-wrapper">
+      <div class="search-icon">
+        🔍
+      </div>
+      <input
+        type="text"
+        class="search-input"
+        placeholder="Search..."
+        [(ngModel)]="searchTerm"
+        (ngModelChange)="onSearchChange()"
+      />
+    </div>
+  
+    <!-- Actions -->
+    <div class="actions-wrapper">
+      <button class="icon-button" (click)="onLock()">🔒</button>
+      <button class="icon-button" (click)="onSelectAll()">☑️</button>
+      <button class="icon-button" (click)="onView()">📄</button>
+      <button class="icon-button" (click)="onPrint()">🖨️</button>
+      <button class="icon-button" (click)="onDelete()">🗑️</button>
+    </div>
+  
+    <!-- Filters -->
+    <div class="filters-wrapper">
+      <select [(ngModel)]="selectedTime" (change)="onTimeChange()">
+        <option>This Month</option>
+        <option>Last Month</option>
+        <option>This Year</option>
+      </select>
+  
+      <select [(ngModel)]="selectedType" (change)="onTypeChange()">
+        <option>Documents</option>
+        <option>PDF</option>
+        <option>Images</option>
+      </select>
+    </div>
+  
+    <!-- Add -->
+    <div class="add-wrapper">
+      <button class="add-button" (click)="onAdd()">➕</button>
+    </div>
+  </div>
+  
