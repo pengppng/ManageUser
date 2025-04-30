@@ -18,12 +18,15 @@ export class DashboardComponent /*implements OnInit*/ {
   readonly Trash2 = Trash2;
   readonly Pencil = Pencil;
 
-  users: User[] = [];
+  public users: User[] = [{ id: "test", name: "Test", createdAt: new Date(), email: "", phoneNumber: "", role: { id: "", name: "", description: "", permissions: [] }, username: "", updatedAt: new Date() }];
 
   constructor(
     private userService: UserService,
     private dialog: MatDialog
-  ) {}
+    
+  ) {
+    console.log(this.users)
+  }
 
   // ngOnInit(): void {
   //   // this.userService.getUsers().subscribe((data: User[]) => {

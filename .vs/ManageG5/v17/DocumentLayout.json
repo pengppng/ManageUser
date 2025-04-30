@@ -3,44 +3,28 @@
   "WorkspaceRootPath": "D:\\gofive\\first\\tryonce\\ManageG5\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|d:\\gofive\\first\\tryonce\\manageg5\\manageg5.client\\src\\app\\components\\sidebar\\sidebar.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|solutionrelative:manageg5.client\\src\\app\\components\\sidebar\\sidebar.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|d:\\gofive\\first\\tryonce\\manageg5\\manageg5.client\\src\\app\\services\\user.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|solutionrelative:manageg5.client\\src\\app\\services\\user.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|d:\\gofive\\first\\tryonce\\manageg5\\manageg5.client\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|solutionrelative:manageg5.client\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|d:\\gofive\\first\\tryonce\\manageg5\\manageg5.client\\src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|solutionrelative:manageg5.client\\src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|d:\\gofive\\first\\tryonce\\manageg5\\manageg5.client\\src\\main.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|solutionrelative:manageg5.client\\src\\main.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|d:\\gofive\\first\\tryonce\\manageg5\\manageg5.client\\src\\app\\services\\auth.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|solutionrelative:manageg5.client\\src\\app\\services\\auth.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|d:\\gofive\\first\\tryonce\\manageg5\\manageg5.client\\src\\app\\sign-in\\sign-in.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|solutionrelative:manageg5.client\\src\\app\\sign-in\\sign-in.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|d:\\gofive\\first\\tryonce\\manageg5\\manageg5.client\\src\\app\\app.routing.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|solutionrelative:manageg5.client\\src\\app\\app.routing.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|d:\\gofive\\first\\tryonce\\manageg5\\manageg5.client\\src\\app\\services\\config.service.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|solutionrelative:manageg5.client\\src\\app\\services\\config.service.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|d:\\gofive\\first\\tryonce\\manageg5\\manageg5.client\\src\\app\\services\\config.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|solutionrelative:manageg5.client\\src\\app\\services\\config.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02F34EA4-F52A-433A-AA04-B29342038CEC}|ManageG5.Server\\ManageG5.Server.csproj|d:\\gofive\\first\\tryonce\\manageg5\\manageg5.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{02F34EA4-F52A-433A-AA04-B29342038CEC}|ManageG5.Server\\ManageG5.Server.csproj|solutionrelative:manageg5.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|d:\\gofive\\first\\tryonce\\manageg5\\manageg5.client\\src\\app\\app.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|solutionrelative:manageg5.client\\src\\app\\app.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|d:\\gofive\\first\\tryonce\\manageg5\\manageg5.client\\src\\main.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|solutionrelative:manageg5.client\\src\\main.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|d:\\gofive\\first\\tryonce\\manageg5\\manageg5.client\\src\\app\\components\\toolsbar-dashboard\\dialog-add\\dialog-add.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|solutionrelative:manageg5.client\\src\\app\\components\\toolsbar-dashboard\\dialog-add\\dialog-add.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|d:\\gofive\\first\\tryonce\\manageg5\\manageg5.client\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88B5E67D-A100-B776-4AF8-12E356AC756D}|manageg5.client\\manageg5.client.esproj|solutionrelative:manageg5.client\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +42,59 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "config.service.ts",
+              "DocumentMoniker": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\services\\config.service.ts",
+              "RelativeDocumentMoniker": "manageg5.client\\src\\app\\services\\config.service.ts",
+              "ToolTip": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\services\\config.service.ts",
+              "RelativeToolTip": "manageg5.client\\src\\app\\services\\config.service.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-25T10:36:08.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "config.service.spec.ts",
+              "DocumentMoniker": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\services\\config.service.spec.ts",
+              "RelativeDocumentMoniker": "manageg5.client\\src\\app\\services\\config.service.spec.ts",
+              "ToolTip": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\services\\config.service.spec.ts",
+              "RelativeToolTip": "manageg5.client\\src\\app\\services\\config.service.spec.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-30T09:48:14.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "app.component.spec.ts",
+              "DocumentMoniker": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\app.component.spec.ts",
+              "RelativeDocumentMoniker": "manageg5.client\\src\\app\\app.component.spec.ts",
+              "ToolTip": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\app.component.spec.ts",
+              "RelativeToolTip": "manageg5.client\\src\\app\\app.component.spec.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-30T09:47:35.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "dialog-add.component.ts",
+              "DocumentMoniker": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\components\\toolsbar-dashboard\\dialog-add\\dialog-add.component.ts",
+              "RelativeDocumentMoniker": "manageg5.client\\src\\app\\components\\toolsbar-dashboard\\dialog-add\\dialog-add.component.ts",
+              "ToolTip": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\components\\toolsbar-dashboard\\dialog-add\\dialog-add.component.ts",
+              "RelativeToolTip": "manageg5.client\\src\\app\\components\\toolsbar-dashboard\\dialog-add\\dialog-add.component.ts",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAYwAAAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-30T09:25:58.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "app.component.html",
               "DocumentMoniker": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\app.component.html",
               "RelativeDocumentMoniker": "manageg5.client\\src\\app\\app.component.html",
@@ -66,25 +102,11 @@
               "RelativeToolTip": "manageg5.client\\src\\app\\app.component.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-04-27T06:25:46.302Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T06:25:46.302Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "sidebar.component.ts",
-              "DocumentMoniker": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\components\\sidebar\\sidebar.component.ts",
-              "RelativeDocumentMoniker": "manageg5.client\\src\\app\\components\\sidebar\\sidebar.component.ts",
-              "ToolTip": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\components\\sidebar\\sidebar.component.ts",
-              "RelativeToolTip": "manageg5.client\\src\\app\\components\\sidebar\\sidebar.component.ts",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-04-27T06:23:41.224Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "main.ts",
               "DocumentMoniker": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\main.ts",
               "RelativeDocumentMoniker": "manageg5.client\\src\\main.ts",
@@ -94,94 +116,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2025-04-27T06:22:57.843Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "app.component.ts",
-              "DocumentMoniker": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\app.component.ts",
-              "RelativeDocumentMoniker": "manageg5.client\\src\\app\\app.component.ts",
-              "ToolTip": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\app.component.ts",
-              "RelativeToolTip": "manageg5.client\\src\\app\\app.component.ts",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADQAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-04-27T06:19:50.337Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "user.service.ts",
-              "DocumentMoniker": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\services\\user.service.ts",
-              "RelativeDocumentMoniker": "manageg5.client\\src\\app\\services\\user.service.ts",
-              "ToolTip": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\services\\user.service.ts",
-              "RelativeToolTip": "manageg5.client\\src\\app\\services\\user.service.ts",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-04-25T10:51:27.289Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "auth.service.ts",
-              "DocumentMoniker": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\services\\auth.service.ts",
-              "RelativeDocumentMoniker": "manageg5.client\\src\\app\\services\\auth.service.ts",
-              "ToolTip": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\services\\auth.service.ts",
-              "RelativeToolTip": "manageg5.client\\src\\app\\services\\auth.service.ts",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAQwCgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-04-25T10:37:53.373Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "sign-in.component.ts",
-              "DocumentMoniker": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\sign-in\\sign-in.component.ts",
-              "RelativeDocumentMoniker": "manageg5.client\\src\\app\\sign-in\\sign-in.component.ts",
-              "ToolTip": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\sign-in\\sign-in.component.ts",
-              "RelativeToolTip": "manageg5.client\\src\\app\\sign-in\\sign-in.component.ts",
-              "ViewState": "AgIAADAAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-04-25T11:00:39.911Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "app.routing.ts",
-              "DocumentMoniker": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\app.routing.ts",
-              "RelativeDocumentMoniker": "manageg5.client\\src\\app\\app.routing.ts",
-              "ToolTip": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\app.routing.ts",
-              "RelativeToolTip": "manageg5.client\\src\\app\\app.routing.ts",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-04-25T11:00:30.721Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "config.service.ts",
-              "DocumentMoniker": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\services\\config.service.ts",
-              "RelativeDocumentMoniker": "manageg5.client\\src\\app\\services\\config.service.ts",
-              "ToolTip": "D:\\gofive\\first\\tryonce\\ManageG5\\manageg5.client\\src\\app\\services\\config.service.ts",
-              "RelativeToolTip": "manageg5.client\\src\\app\\services\\config.service.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-04-25T10:36:08.774Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\gofive\\first\\tryonce\\ManageG5\\ManageG5.Server\\appsettings.json",
-              "RelativeDocumentMoniker": "ManageG5.Server\\appsettings.json",
-              "ToolTip": "D:\\gofive\\first\\tryonce\\ManageG5\\ManageG5.Server\\appsettings.json",
-              "RelativeToolTip": "ManageG5.Server\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-25T07:01:17.528Z"
             }
           ]
         }
