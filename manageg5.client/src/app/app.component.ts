@@ -55,7 +55,7 @@ export class AppComponent {
   forecasts(forecasts: any) {
     throw new Error('Method not implemented.');
   }
-  ngOnInit() {
+  ngOnInit(): void  {
     throw new Error('Method not implemented.');
   }
   title = "Gofive-Admin-System"

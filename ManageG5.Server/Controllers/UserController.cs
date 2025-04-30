@@ -8,6 +8,8 @@ namespace ManageG5.Server.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+        private readonly AppDbContext _context;
+
         private static List<User> users = new List<User>();
 
         // GET: api/user
@@ -19,7 +21,7 @@ namespace ManageG5.Server.Controllers
             return Ok(users);
         }
 
-        // GET: api/user/{id}
+        // GET: api/user/{id} for check login
         [HttpGet("{id}")]
         public IActionResult GetUser(string id)
         {

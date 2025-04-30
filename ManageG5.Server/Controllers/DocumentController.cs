@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ManageG5.Server.Controllers
 {
-    [Route("api/v1/[controller]")]
+    [Route("api/v1/[controller]s")]
     [ApiController]
     public class DocumentController : Controller
     {
