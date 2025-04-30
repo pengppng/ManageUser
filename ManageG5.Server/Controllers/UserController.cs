@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ManageG5.Server.Models;
 
 namespace ManageG5.Server.Controllers
@@ -9,75 +9,79 @@ namespace ManageG5.Server.Controllers
     public class UserController : ControllerBase
     {
         private readonly AppDbContext _context;
-
+        public UserController(AppDbContext context){ _context = context; }
         private static List<User> users = new List<User>();
 
         // GET: api/user
         [HttpGet]
-        public IActionResult GetUsers()
+        public async Task<IActionResult> GetUsers()
         {
-            users.Add(new User { Username = "inaHogan007", Id ="admin",Email = "aa@ggg.com",PhoneNumber="",Role = new Role() { Name = "Admin", Description ="" }, RoleId ="1",Name = "",  });
-       
+            var users = await _context.Users
+                .Include(u => u.Role)
+                .ToListAsync();
+
             return Ok(users);
         }
 
         // GET: api/user/{id} for check login
         [HttpGet("{id}")]
-        public IActionResult GetUser(string id)
+        public async Task<IActionResult> GetUser(string id)
         {
-            var user = users.FirstOrDefault(u => u.Id == id);
+            var user = await _context.Users
+                .Include(u => u.Role)
+                .FirstOrDefaultAsync(u => u.Id == id);
+
             if (user == null)
-            {
                 return NotFound();
-            }
+
             return Ok(user);
         }
 
         // POST: api/user
         [HttpPost]
-        public IActionResult CreateUser([FromBody] User user)
+        public async Task<IActionResult> CreateUser([FromBody] User user)
         {
             if (user == null)
-            {
                 return BadRequest();
-            }
 
             user.CreatedAt = DateTime.UtcNow;
-            users.Add(user);
+            user.UpdatedAt = DateTime.UtcNow;
+
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+
             return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
         }
 
         // PUT: api/user/{id}
         [HttpPut("{id}")]
-        public IActionResult UpdateUser(string id, [FromBody] User updatedUser)
+        public async Task<IActionResult> UpdateUser(string id, [FromBody] User updatedUser)
         {
-            var user = users.FirstOrDefault(u => u.Id == id);
+            var user = await _context.Users.FindAsync(id);
             if (user == null)
-            {
                 return NotFound();
-            }
 
             user.Name = updatedUser.Name;
             user.Username = updatedUser.Username;
             user.Email = updatedUser.Email;
             user.PhoneNumber = updatedUser.PhoneNumber;
             user.RoleId = updatedUser.RoleId;
-            user.Role = updatedUser.Role;
             user.UpdatedAt = DateTime.UtcNow;
+
+            await _context.SaveChangesAsync();
             return NoContent();
         }
 
         // DELETE: api/user/{id}
         [HttpDelete("{id}")]
-        public IActionResult DeleteUser(string id)
+        public async Task<IActionResult> DeleteUser(string id)
         {
-            var user = users.FirstOrDefault(u => u.Id == id);
+            var user = await _context.Users.FindAsync(id);
             if (user == null)
-            {
                 return NotFound();
-            }
 
-            users.Remove(user);
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
             return NoContent();
         }
     }

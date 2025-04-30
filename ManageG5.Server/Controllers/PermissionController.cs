@@ -1,5 +1,6 @@
 ﻿using ManageG5.Server;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ManageG5.Server.Models;   
 
 namespace ManageSystemAPI.Controllers
@@ -8,68 +9,76 @@ namespace ManageSystemAPI.Controllers
     [ApiController]
     public class PermissionController : ControllerBase
     {
-        private static List<Permission> permissions = new List<Permission>();
+        private readonly AppDbContext _context;
+
+        public PermissionController(AppDbContext context)
+        {
+            _context = context;
+        }
 
         // GET: api/permission
         [HttpGet]
-        public IActionResult GetPermissions()
+        public async Task<IActionResult> GetPermissions()
         {
-            return Ok(new { message = "Permission API is working!" });
+            var permissions = await _context.Permissions
+                .Include(p => p.RolePermissions)
+                .ToListAsync();
+            return Ok(new { data = permissions, message = "Permissions retrieved successfully." });
         }
 
         // GET: api/permission/{id}
         [HttpGet("{id}")]
-        public IActionResult GetPermission(Guid id)
+        public async Task<IActionResult> GetPermission(Guid id)
         {
-            var permission = permissions.FirstOrDefault(p => p.Id == id);
+            var permission = await _context.Permissions
+                .Include(p => p.RolePermissions)
+                .FirstOrDefaultAsync(p => p.Id == id);
+
             if (permission == null)
-            {
                 return NotFound();
-            }
+
             return Ok(permission);
         }
 
         // POST: api/permission
         [HttpPost]
-        public IActionResult CreatePermission([FromBody] Permission permission)
+        public async Task<IActionResult> CreatePermission([FromBody] Permission permission)
         {
             if (permission == null)
-            {
                 return BadRequest();
-            }
 
-            permission.Id = Guid.NewGuid(); // Ensure a unique ID is assigned
-            permissions.Add(permission);
+            permission.Id = Guid.NewGuid();
+            _context.Permissions.Add(permission);
+            await _context.SaveChangesAsync();
+
             return CreatedAtAction(nameof(GetPermission), new { id = permission.Id }, permission);
         }
 
         // PUT: api/permission/{id}
-        [HttpPut("{id}")]
-        public IActionResult UpdatePermission(Guid id, [FromBody] Permission updatedPermission)
+        public async Task<IActionResult> UpdatePermission(Guid id, [FromBody] Permission updated)
         {
-            var permission = permissions.FirstOrDefault(p => p.Id == id);
+            var permission = await _context.Permissions.FindAsync(id);
             if (permission == null)
-            {
                 return NotFound();
-            }
 
-            permission.Name = updatedPermission.Name;
-            permission.Roles = updatedPermission.Roles;  // Update roles
-            return NoContent(); // Successfully updated
+            permission.Name = updated.Name;
+            await _context.SaveChangesAsync();
+
+            return NoContent();
         }
 
         // DELETE: api/permission/{id}
         [HttpDelete("{id}")]
-        public IActionResult DeletePermission(Guid id)
+        public async Task<IActionResult> DeletePermission(Guid id)
         {
-            var permission = permissions.FirstOrDefault(p => p.Id == id);
+            var permission = await _context.Permissions.FindAsync(id);
             if (permission == null)
-            {
                 return NotFound();
-            }
 
-            permissions.Remove(permission);
-            return NoContent(); // Successfully deleted
+            _context.Permissions.Remove(permission);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
         }
     }
 }

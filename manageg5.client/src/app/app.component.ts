@@ -46,7 +46,7 @@ import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-root',
-   standalone: true,
+  //  standalone: true,
   imports: [RouterOutlet, SidebarComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
