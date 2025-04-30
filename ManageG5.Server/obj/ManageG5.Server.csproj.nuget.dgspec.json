@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\gofive\\first\\tryonce\\ManageG5\\ManageG5.Server\\ManageG5.Server.csproj": {}
+    "D:\\gofive\\first\\tryonce\\ManageG5\\Manage_Go5\\ManageG5.Server\\ManageG5.Server.csproj": {}
   },
   "projects": {
-    "D:\\gofive\\first\\tryonce\\ManageG5\\ManageG5.Server\\ManageG5.Server.csproj": {
+    "D:\\gofive\\first\\tryonce\\ManageG5\\Manage_Go5\\ManageG5.Server\\ManageG5.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\gofive\\first\\tryonce\\ManageG5\\ManageG5.Server\\ManageG5.Server.csproj",
+        "projectUniqueName": "D:\\gofive\\first\\tryonce\\ManageG5\\Manage_Go5\\ManageG5.Server\\ManageG5.Server.csproj",
         "projectName": "ManageG5.Server",
-        "projectPath": "D:\\gofive\\first\\tryonce\\ManageG5\\ManageG5.Server\\ManageG5.Server.csproj",
+        "projectPath": "D:\\gofive\\first\\tryonce\\ManageG5\\Manage_Go5\\ManageG5.Server\\ManageG5.Server.csproj",
         "packagesPath": "C:\\Users\\panna\\.nuget\\packages\\",
-        "outputPath": "D:\\gofive\\first\\tryonce\\ManageG5\\ManageG5.Server\\obj\\",
+        "outputPath": "D:\\gofive\\first\\tryonce\\ManageG5\\Manage_Go5\\ManageG5.Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
