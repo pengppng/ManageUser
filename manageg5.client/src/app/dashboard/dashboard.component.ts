@@ -9,25 +9,34 @@ import { DialogAddComponent } from '../components/toolsbar-dashboard/dialog-add/
 
 @Component({
   selector: 'app-dashboard',
-  // standalone: true,
+  standalone: true,
   imports: [CommonModule, ToolsbarDashboardComponent, LucideAngularModule],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent /*implements OnInit*/ {
   readonly Trash2 = Trash2;
   readonly Pencil = Pencil;
 
   users: User[] = [];
-  dialog: any;
 
-  constructor(private userService: UserService) {}
+  constructor(
+    private userService: UserService,
+    private dialog: MatDialog
+  ) {}
 
-  ngOnInit(): void {
-    this.userService.getUsers().subscribe((data: User[]) => {
-      this.users = data;
-    });
+  // ngOnInit(): void {
+  //   // this.userService.getUsers().subscribe((data: User[]) => {
+  //   //   this.users = data;
+  //   // });
+  //   this.loadUsers();
+  // }
+
+  onUserAdded() {
+    console.log('📢 Received userAdded event!');
+    // this.loadUsers();
   }
+  
 
   openAddUserDialog(): void {
     const dialogRef = this.dialog.open(DialogAddComponent, {
@@ -37,9 +46,25 @@ export class DashboardComponent implements OnInit {
     dialogRef.afterClosed().subscribe((result: User) => {
       if (result) {
         console.log('New user added:', result);
-        this.users.push(result);
+        // this.loadUsers(); // this.users.push(result);
       }
     });
+  }
+
+  loadUsers(newuser : User): void {
+    console.log('📦 Loading users...');
+    this.users.push(newuser);
+    console.log('📥 Users loaded:', this.users);
+
+    // this.userService.getUsers().subscribe({
+    //   next: (data) => {
+    //     this.users = data;
+    //     console.log('📥 Users loaded:', this.users);
+    //   },
+    //   error: (err) => {
+    //     console.error('❌ Failed to load users:', err);
+    //   }
+    // });
   }
 
   getBadgeColor(role: any): string {

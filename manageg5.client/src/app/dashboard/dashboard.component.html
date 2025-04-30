@@ -1,5 +1,5 @@
 <h1 class="page-title">Users Dashboard</h1>
-<app-toolsbar-dashboard></app-toolsbar-dashboard>
+<app-toolsbar-dashboard (addUser)="loadUsers($event)"></app-toolsbar-dashboard>
 <div class="users-list-container">
     <h2 class="list-title">List Users</h2>
     <div class="table-container">
@@ -21,10 +21,10 @@
             <td>{{ user.createdAt }}</td>
             <td>
               <span
-                class="badge"
-                [ngClass]="getBadgeColor(user.role)"
+          class="badge"
+          [ngClass]="getBadgeColor(user.role)"
               >
-                {{ user.role.name }}
+          {{ user.role.name }}
               </span>
             </td>
             <td class="action-buttons">

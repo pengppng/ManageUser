@@ -41,9 +41,7 @@ namespace ManageG5.Server.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateUser([FromBody] User user)
         {
-            if (user == null)
-                return BadRequest();
-
+            user.Id = Guid.NewGuid().ToString(); // ต้องตั้ง id เอง ถ้าไม่ auto
             user.CreatedAt = DateTime.UtcNow;
             user.UpdatedAt = DateTime.UtcNow;
 
@@ -52,6 +50,7 @@ namespace ManageG5.Server.Controllers
 
             return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
         }
+
 
         // PUT: api/user/{id}
         [HttpPut("{id}")]

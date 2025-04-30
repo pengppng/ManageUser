@@ -35,13 +35,11 @@ export interface DialogData {
     MatDialogTitle,
     MatDialogContent,
     MatDialogActions,
-    MatDialogClose,
+    /*MatDialogClose,*/
     MatSelectModule,
   ],
 })
 export class DialogAddComponent {
-  readonly dialogRef = inject(MatDialogRef<DialogAddComponent>);
-
   roleOptions = ['Super Admin','Admin','Employee', 'Lorem Ipsum'];
   readonly addUserForm: FormGroup;
   readonly errorMessage = signal('');
@@ -53,7 +51,8 @@ export class DialogAddComponent {
     { module: 'Lorem Ipsum', read: false, write: false, delete: false }
   ]);
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder , readonly dialogRef : MatDialogRef<DialogAddComponent>) {
+    
     this.addUserForm = this.fb.group({
       userId: ['', Validators.required],
       firstName: ['', Validators.required],
