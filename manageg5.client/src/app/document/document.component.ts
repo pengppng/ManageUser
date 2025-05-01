@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// import { LucideAngularModule, Pencil, Trash2 } from 'lucide-angular';
 import { DocumentToolbarComponent } from '../components/toolbar-document/toolbar-document.component';
 import { CommonModule } from '@angular/common';
 import { Document } from '../models/document.model';
@@ -13,8 +12,6 @@ import { DocumentService } from '../services/document.service';
   styleUrl: './document.component.css'
 })
 export class DocumentComponent {
-  // readonly Trash2 = Trash2;
-  // readonly Pencil = Pencil;
 
   public documents: Document[] = [{ 
     id: "testdoc", 
