@@ -6,7 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { ChangeDetectionStrategy } from '@angular/core';
 import { Component, Output, EventEmitter } from '@angular/core';
-import { DialogAddComponent } from './dialog-addd/dialog-addd.component';
+import { DialogAdddocComponent } from './dialog-addd/dialog-addd.component';
 import { Document } from '../../models/document.model'
 import { DocumentService } from '../../services/document.service';
 

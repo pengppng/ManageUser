@@ -32,11 +32,11 @@ import { MatSelectModule } from '@angular/material/select';
     MatSelectModule,
   ],
 })
-export class DialogAddComponent {
+export class DialogAdddocComponent {
   name = '';
   description = '';
 
-  constructor(public dialogRef: MatDialogRef<DialogAddComponent>) {}
+  constructor(public dialogRef: MatDialogRef<DialogAdddocComponent>) {}
 
   save() {
     if (!this.name || !this.description) return;
