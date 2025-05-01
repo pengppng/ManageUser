@@ -57,4 +57,5 @@ export class DocumentToolbarComponent {
   onAdd() {
     console.log('Add new document');
   }
+  
 }

@@ -28,12 +28,8 @@
               </span>
             </td>
             <td class="action-buttons">
-              <button class="edit-button">
-                <!--<lucide-angular [img]="Pencil"></lucide-angular>-->
-              </button>
-              <button class="delete-button">
-                <!--<lucide-angular [img]="Trash2"></lucide-angular>-->
-              </button>
+              <button class="edit-button" (click)="editUser(user)" title="Edit">✏️</button>
+              <button class="delete-button" (click)="deleteUser(user)" title="Delete">🗑️</button>
             </td>
           </tr>
         </tbody>

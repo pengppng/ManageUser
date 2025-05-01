@@ -335,4 +335,3 @@ D:\gofive\first\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\refint\ManageG
 D:\gofive\first\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\ManageG5.Server.pdb
 D:\gofive\first\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\ManageG5.Server.genruntimeconfig.cache
 D:\gofive\first\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\ref\ManageG5.Server.dll
-D:\gofive\first\tryonce\ManageG5\ManageG5.Server\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
