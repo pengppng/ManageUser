@@ -1,16 +1,19 @@
 import { CommonModule } from '@angular/common'; 
-import { Component, model, signal } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { ChangeDetectionStrategy } from '@angular/core';
-// import { DialogAddComponent } from './dialog-add/dialog-add.component';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { DialogAddComponent } from './dialog-addd/dialog-addd.component';
+import { Document } from '../../models/document.model'
+import { DocumentService } from '../../services/document.service';
+
 
 @Component({
-  selector: 'app-toolsbar-dashboard',
-  // standalone: true,
+  selector: 'app-toolsbar-document',
+  standalone: true,
   imports: [CommonModule,MatFormFieldModule, MatInputModule, FormsModule, MatButtonModule],
   templateUrl: './toolbar-document.component.html',
   styleUrl: './toolbar-document.component.css',
@@ -22,42 +25,45 @@ export class DocumentToolbarComponent {
   selectedTime = 'This Month';
   selectedType = 'Documents';
 
-  
+  // @Output() addDocument = new EventEmitter<Document>();
+  // constructor(private dialog: MatDialog, private documentService: DocumentService) {}
 
-  onSearchChange() {
-    console.log('Searching:', this.searchTerm);
-  }
 
-  onLock() {
-    console.log('Lock clicked');
-  }
+  // name = '';
+  // description = '';
 
-  onSelectAll() {
-    console.log('Select All clicked');
-  }
+  // onAdd() {const dialogRef = this.dialog.open(DialogAddComponent, {
+  //   width: '400px',
+  // });
 
-  onView() {
-    console.log('View clicked');
-  }
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     if (result) {
+  //       const payload = {
+  //         name: result.name,
+  //         description: result.description
+  //       };
+  //       console.log('📤 Sending document payload:', payload);
+  //       this.addDocument.emit(payload); // ส่ง Partial<Document>
+  //     }
+  //   });
+  // }
 
-  onPrint() {
-    console.log('Print clicked');
-  }
+  onAdd() {    console.log('Add new document');  }
 
-  onDelete() {
-    console.log('Delete clicked');
-  }
+  onSearchChange() {    console.log('Searching:', this.searchTerm);  }
 
-  onTimeChange() {
-    console.log('Time changed to:', this.selectedTime);
-  }
+  onLock() {    console.log('Lock clicked');  }
 
-  onTypeChange() {
-    console.log('Type changed to:', this.selectedType);
-  }
+  onSelectAll() {    console.log('Select All clicked');  }
 
-  onAdd() {
-    console.log('Add new document');
-  }
+  onView() {    console.log('View clicked');  }
+
+  onPrint() {    console.log('Print clicked');  }
+
+  onDelete() {    console.log('Delete clicked');  }
+
+  onTimeChange() {    console.log('Time changed to:', this.selectedTime);  }
+
+  onTypeChange() {    console.log('Type changed to:', this.selectedType);  }
   
 }

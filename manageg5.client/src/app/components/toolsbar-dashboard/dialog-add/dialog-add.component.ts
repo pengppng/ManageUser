@@ -13,7 +13,6 @@ import { MatSelectModule } from '@angular/material/select';
 
 
 export interface DialogData {
-  animal: string;
   name: string;
   email: string;
   phone: string;

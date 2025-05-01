@@ -3,11 +3,18 @@ import { DocumentToolbarComponent } from '../components/toolbar-document/toolbar
 import { CommonModule } from '@angular/common';
 import { Document } from '../models/document.model';
 import { DocumentService } from '../services/document.service';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+
 
 @Component({
   selector: 'app-document',
   standalone: true,
-  imports: [CommonModule, DocumentToolbarComponent],
+  imports: [CommonModule, DocumentToolbarComponent, MatFormFieldModule,
+    MatInputModule,    FormsModule,    MatButtonModule,MatDialogModule],
   templateUrl: './document.component.html',
   styleUrl: './document.component.css'
 })
@@ -31,6 +38,18 @@ export class DocumentComponent {
   //     this.documents = data;
   //   },);
   // }
+
+  addDocument(doc: Partial<Document>): void {
+    this.documentsService.addDocument(doc as Document).subscribe({
+      next: (createdDoc: Document) => {
+        console.log('✅ Document created:', createdDoc);
+        this.documents.push(createdDoc);
+      },
+      error: (err) => {
+        console.error('❌ Error creating document:', err);
+      }
+    });
+  }
 
   loadDocument(newdoc : Document): void {
     console.log('📦 Loading docs...');

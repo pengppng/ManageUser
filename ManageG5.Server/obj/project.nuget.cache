@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R6smdGViJtc=",
+  "dgSpecHash": "zBtrbsaktaU=",
   "success": true,
-  "projectFilePath": "D:\\gofive\\first\\tryonce\\ManageG5\\Manage_Go5\\ManageG5.Server\\ManageG5.Server.csproj",
+  "projectFilePath": "D:\\gofive\\first\\tryonce\\ManageG5\\ManageG5.Server\\ManageG5.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\panna\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\panna\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
