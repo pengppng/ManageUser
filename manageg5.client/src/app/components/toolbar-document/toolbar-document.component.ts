@@ -22,6 +22,8 @@ export class DocumentToolbarComponent {
   selectedTime = 'This Month';
   selectedType = 'Documents';
 
+  
+
   onSearchChange() {
     console.log('Searching:', this.searchTerm);
   }
