@@ -9,8 +9,8 @@ namespace ManageG5.Server.Models
         public required string Username { get; set; }
         public required string Email { get; set; }
         public required string PhoneNumber { get; set; }
-        public required string RoleId { get; set; }
-        public required Role Role { get; set; }
+        public Guid RoleId { get; set; }
+        public Role Role { get; set; } = null!;
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
     }

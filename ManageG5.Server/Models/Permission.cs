@@ -9,8 +9,9 @@ namespace ManageG5.Server.Models
         public string Name { get; set; } = string.Empty;
         
         [NotMapped]
-        public ICollection<RolePermission> RolePermissions { get; set; }
-        public object Roles { get; internal set; }
+        public ICollection<RolePermission> RolePermissions { get; set; }= new List<RolePermission>();
+        public Role? Role { get; internal set; }
+        public List<string> Roles { get; set; } = new();
 
 
         

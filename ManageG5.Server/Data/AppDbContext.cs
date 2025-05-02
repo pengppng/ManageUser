@@ -8,10 +8,16 @@ public class AppDbContext : DbContext
     public DbSet<User> Users { get; set; }
     public DbSet<Role> Roles { get; set; }
     public DbSet<Permission> Permissions { get; set; }
+    public DbSet<RolePermission> RolePermissions { get; set; }
     public DbSet<Document> Documents { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        // --- Relationship: User -> Role ---
+        modelBuilder.Entity<User>()
+            .HasOne(u => u.Role)
+            .WithMany(r => r.Users)
+            .HasForeignKey(u => u.RoleId);
         // --- Role-Permission many-to-many setup ---
         modelBuilder.Entity<RolePermission>()
             .HasKey(rp => new { rp.RoleId, rp.PermissionId });
@@ -27,21 +33,22 @@ public class AppDbContext : DbContext
             .HasForeignKey(rp => rp.PermissionId);
 
         // --- Seed Permissions ---
-        var readPermissionId = Guid.NewGuid();
-        var writePermissionId = Guid.NewGuid();
-        var deletePermissionId = Guid.NewGuid();
+        var readPermissionId = Guid.Parse("11111111-1111-1111-1111-111111111111");
+        var writePermissionId = Guid.Parse("22222222-2222-2222-2222-222222222222");
+        var deletePermissionId = Guid.Parse("33333333-3333-3333-3333-333333333333");
 
+        
         modelBuilder.Entity<Permission>().HasData(
-            new Permission { Id = readPermissionId, Name = "read" },
-            new Permission { Id = writePermissionId, Name = "write" },
-            new Permission { Id = deletePermissionId, Name = "delete" }
+            new Permission { Id = readPermissionId, Name = "read",  },
+            new Permission { Id = writePermissionId, Name = "write", },
+            new Permission { Id = deletePermissionId, Name = "delete", }
         );
 
         // --- Seed Roles ---
-        var superAdminRoleId = Guid.NewGuid();
-        var adminRoleId = Guid.NewGuid();
-        var hrAdminRoleId = Guid.NewGuid();
-        var employeeRoleId = Guid.NewGuid();
+        var superAdminRoleId = Guid.Parse("aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa");
+        var adminRoleId = Guid.Parse("bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb");
+        var hrAdminRoleId = Guid.Parse("cccccccc-cccc-cccc-cccc-cccccccccccc");
+        var employeeRoleId = Guid.Parse("dddddddd-dddd-dddd-dddd-dddddddddddd");
 
         modelBuilder.Entity<Role>().HasData(
             new Role { Id = superAdminRoleId, Name = "Super Admin", Description = "Has full access" },
@@ -52,28 +59,29 @@ public class AppDbContext : DbContext
 
         // --- Seed RolePermissions ---
         modelBuilder.Entity<RolePermission>().HasData(
-            new RolePermission { RoleId = 1, PermissionId = readPermissionId },
-            new RolePermission { RoleId = 1, PermissionId = writePermissionId },
-            new RolePermission { RoleId = 1, PermissionId = deletePermissionId },
-            new RolePermission { RoleId = 2, PermissionId = readPermissionId },
-            new RolePermission { RoleId = 2, PermissionId = writePermissionId },
-            new RolePermission { RoleId = 2, PermissionId = deletePermissionId },
-            new RolePermission { RoleId = 3, PermissionId = readPermissionId },
-            new RolePermission { RoleId = 4, PermissionId = readPermissionId }
+            new RolePermission { RoleId = superAdminRoleId, PermissionId = readPermissionId },
+            new RolePermission { RoleId = superAdminRoleId, PermissionId = writePermissionId },
+            new RolePermission { RoleId = superAdminRoleId, PermissionId = deletePermissionId },
+            new RolePermission { RoleId = adminRoleId, PermissionId = readPermissionId },
+            new RolePermission { RoleId = adminRoleId, PermissionId = writePermissionId },
+            new RolePermission { RoleId = adminRoleId, PermissionId = deletePermissionId },
+            new RolePermission { RoleId = hrAdminRoleId, PermissionId = readPermissionId },
+            new RolePermission { RoleId = employeeRoleId, PermissionId = readPermissionId }
         );
 
 
         // --- Seed Users ---
+        var userId = "u00000000-0000-0000-0000-000000000001";
         modelBuilder.Entity<User>().HasData(
             new User
             {
-                Id = Guid.NewGuid().ToString(),
+                Id = userId,
                 Name = "David Wagner",
                 Username = "davidWagnerGG",
                 Email = "david_wagner@example.com",
                 PhoneNumber = "0999999999",
-                RoleId = Guid.NewGuid().ToString(),
-                Role = new Role { Id = Guid.NewGuid(), Name = "Super Admin", Description = "Has full access" },
+                RoleId = superAdminRoleId,
+                // Role = new Role { Id = Guid.NewGuid(), Name = "Super Admin", Description = "Has full access" },
                 CreatedAt = DateTime.Parse("2015-10-24"),
                 UpdatedAt = DateTime.Parse("2015-10-24")
             }
@@ -83,14 +91,14 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Document>().HasData(
             new Document
             {
-                Id = Guid.NewGuid().ToString(),
+                Id = "10000000-0000-0000-0000-000000000001",// Id = Guid.NewGuid().ToString(),
                 Name = "Annual Report 2024",
                 Description = "Company performance 2024",
                 CreatedAt = DateTime.Parse("2024-01-15")
             },
             new Document
             {
-                Id = Guid.NewGuid().ToString(),
+                Id = "10000000-0000-0000-0000-000000000002", //Id = Guid.NewGuid().ToString(),
                 Name = "Employee Handbook",
                 Description = "Company policies",
                 CreatedAt = DateTime.Parse("2024-02-10")
