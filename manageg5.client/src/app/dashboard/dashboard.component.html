@@ -1,12 +1,8 @@
 <h1 class="page-title">Users Dashboard</h1>
-<!-- <app-toolsbar-dashboard (addUser)="onUserAdded($event)"   (userChanged)="onUserChanged($event)"></app-toolsbar-dashboard> -->
-<app-toolsbar-dashboard (addUser)="onUserAdded($event)"></app-toolsbar-dashboard>
-
+<app-toolsbar-dashboard (addUser)="loadUsers($event)"></app-toolsbar-dashboard>
 <div class="users-list-container">
     <h2 class="list-title">List Users</h2>
     <div class="table-container">
-      <p>Total users: {{ users.length }}</p>
-      <pre>{{ users | json }}</pre>
       <table class="users-table">
         <thead>
           <tr>
@@ -25,8 +21,10 @@
             <td>{{ user.createdAt }}</td>
             <td>
               <span
-          class="badge"  [ngClass]="getBadgeColor(user.role)">
-          {{ user.role?.name  || 'No Role' }}
+          class="badge"
+          [ngClass]="getBadgeColor(user.role)"
+              >
+          {{ user.role.name }}
               </span>
             </td>
             <td class="action-buttons">

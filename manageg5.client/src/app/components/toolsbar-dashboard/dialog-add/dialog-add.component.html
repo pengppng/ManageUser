@@ -30,15 +30,10 @@
       <input matInput formControlName="mobileNo" />
     </mat-form-field>
 
-    <mat-form-field appearance="fill" class="full-width">
-      <mat-label>Role</mat-label>
-      <mat-select [(ngModel)]="selectedRoleId">
-        <mat-option *ngFor="let role of roles" [value]="role.id">
-          {{ role.name }}
-        </mat-option>
-      </mat-select>
+    <mat-form-field appearance="outline">
+      <mat-label>Role Type</mat-label>
+      <input matInput formControlName="roleType" />
     </mat-form-field>
-    
 
     <mat-form-field appearance="outline">
       <mat-label>Username</mat-label>
