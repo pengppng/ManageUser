@@ -14,11 +14,11 @@ import { DialogAddComponent } from '../components/toolsbar-dashboard/dialog-add/
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent /*implements OnInit*/ {
+export class DashboardComponent implements OnInit {
   // readonly Trash2 = Trash2;
   // readonly Pencil = Pencil;
 
-  public users: User[] = [{ id: "test", name: "Test", createdAt: new Date(), email: "", phoneNumber: "", role: { id: "", name: "", description: "", permissions: [] }, username: "", updatedAt: new Date() }];
+  public users: User[] = []; //[{ id: "test", name: "Test", createdAt: new Date(), email: "", phoneNumber: "", role: { id: "", name: "", description: "", permissions: [] }, username: "", updatedAt: new Date() }];
 
   constructor(
     private userService: UserService,
@@ -28,15 +28,37 @@ export class DashboardComponent /*implements OnInit*/ {
     console.log(this.users)
   }
 
-  // ngOnInit(): void {
-  //   // this.userService.getUsers().subscribe((data: User[]) => {
-  //   //   this.users = data;
-  //   // });
-  //   this.loadUsers();
-  // }
+  ngOnInit(): void {
+    this.loadUsers();
+  }
+  
+  loadUsers(): void {
+    this.userService.getUsers().subscribe({
+      next: (data) => {
+        this.users = data;
+        console.log('📥 Users loaded:', data);
+        this.users = data;
+      },
+      error: (err) => {
+        console.error('❌ Failed to load users:', err);
+      }
+    });
+  }
 
-  onUserAdded() {
-    console.log('📢 Received userAdded event!');
+
+  onUserAdded(user: User) {
+    console.log('📢 Received userAdded event!',user);
+    
+    this.userService.addUser(user).subscribe({
+      next: (res) => {
+        console.log('✅ User added to backend!',res);
+        this.loadUsers(); // โหลดใหม่จาก backend
+      },
+      error: err => {
+        console.error('❌ Failed to add user:', err);
+      }
+    });
+    // console.log('📢 Received userAdded event!');
     // this.loadUsers();
   }
   
@@ -54,21 +76,7 @@ export class DashboardComponent /*implements OnInit*/ {
     });
   }
 
-  loadUsers(newuser : User): void {
-    console.log('📦 Loading users...');
-    this.users.push(newuser);
-    console.log('📥 Users loaded:', this.users);
-
-    // this.userService.getUsers().subscribe({
-    //   next: (data) => {
-    //     this.users = data;
-    //     console.log('📥 Users loaded:', this.users);
-    //   },
-    //   error: (err) => {
-    //     console.error('❌ Failed to load users:', err);
-    //   }
-    // });
-  }
+  
 
   getBadgeColor(role: any): string {
     if (!role || !role.name) return 'badge-default';
@@ -90,7 +98,5 @@ export class DashboardComponent /*implements OnInit*/ {
       console.log('🗑️ User deleted:', user);
     }
   }
-  
-
 
 }

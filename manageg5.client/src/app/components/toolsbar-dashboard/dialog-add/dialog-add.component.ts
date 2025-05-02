@@ -10,7 +10,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { merge } from 'rxjs';
 import { MatSelectModule } from '@angular/material/select';
-
+import { RoleService } from '../../../services/role.service';
+import { Role } from '../../../models/role.model';
 
 export interface DialogData {
   name: string;
@@ -42,6 +43,8 @@ export class DialogAddComponent {
   roleOptions = ['Super Admin','Admin','Employee', 'Lorem Ipsum'];
   readonly addUserForm: FormGroup;
   readonly errorMessage = signal('');
+  roles: Role[] = [];
+  selectedRoleId = '';
 
   permissions = signal([
     { module: 'Super Admin', read: false, write: false, delete: false },
@@ -50,7 +53,7 @@ export class DialogAddComponent {
     { module: 'Lorem Ipsum', read: false, write: false, delete: false }
   ]);
 
-  constructor(private fb: FormBuilder , readonly dialogRef : MatDialogRef<DialogAddComponent>) {
+  constructor(private fb: FormBuilder , readonly dialogRef : MatDialogRef<DialogAddComponent>,private roleService: RoleService) {
     
     this.addUserForm = this.fb.group({
       userId: ['', Validators.required],
@@ -58,12 +61,13 @@ export class DialogAddComponent {
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       mobileNo: [''],
-      roleType: ['', Validators.required],
+      roleId: ['', Validators.required],
       username: ['', Validators.required],
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required]
     });
 
+    this.fetchRoles();
     merge(
       this.addUserForm.get('email')!.statusChanges,
       this.addUserForm.get('email')!.valueChanges
@@ -83,6 +87,17 @@ export class DialogAddComponent {
     }
   }
 
+  fetchRoles() {
+    this.roleService.getRoles().subscribe({
+      next: (data) => {
+        this.roles = data;
+      },
+      error: (err) => {
+        console.error('❌ Failed to load roles:', err);
+      }
+    });
+  }
+
   onNoClick(): void {
     this.dialogRef.close();
   }
@@ -91,7 +106,8 @@ export class DialogAddComponent {
     if (this.addUserForm.valid) {
       const result = {
         ...this.addUserForm.value,
-        permissions: this.permissions()
+        permissions: this.permissions(),
+        roleId: this.selectedRoleId,
       };
       console.log('Result:', result);
       this.dialogRef.close(result);

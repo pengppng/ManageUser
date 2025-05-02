@@ -41,7 +41,11 @@ namespace ManageG5.Server.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateUser([FromBody] User user)
         {
-            user.Id = Guid.NewGuid().ToString(); // ต้องตั้ง id เอง ถ้าไม่ auto
+           if (string.IsNullOrEmpty(user.Id))
+            {
+                user.Id = Guid.NewGuid().ToString(); // สร้างใหม่ถ้าไม่มีมา
+            }
+
             user.CreatedAt = DateTime.UtcNow;
             user.UpdatedAt = DateTime.UtcNow;
 

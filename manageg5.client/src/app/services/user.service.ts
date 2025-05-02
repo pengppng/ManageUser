@@ -23,6 +23,7 @@ export class UserService {
   }
   // User
   addUser(payload: User): Observable<any> {
+    console.log('📤 POST to backend with:', payload);
     return this.configService.post<User>('/Users', payload);
   }
 
