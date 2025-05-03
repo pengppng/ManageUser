@@ -49,18 +49,18 @@ export class ToolsbarDashboardComponent {
           }
         };
 
-        this.addUser.emit(payload)
+        // this.addUser.emit(payload)
 
-        // this.userService.addUser(payload).subscribe({
-        //   next: () => {
-        //     console.log('✅ User created successfully');
-        //     this.addUser.emit(payload); // แจ้ง Dashboard โหลดข้อมูลใหม่
-        //   },
-        //   error: (err) => {
-        //     console.error('❌ Failed to create user:', err);
-        //   }
-        // });
-        // console.log('📣 Dialog closed with result:', result);
+        this.userService.addUser(payload).subscribe({
+          next: () => {
+            console.log('✅ User created successfully');
+            this.addUser.emit(payload); // แจ้ง Dashboard โหลดข้อมูลใหม่
+          },
+          error: (err) => {
+            console.error('❌ Failed to create user:', err);
+          }
+        });
+        console.log('📣 Dialog closed with result:', result);
       }
     });
   

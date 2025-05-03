@@ -43,9 +43,9 @@ export class DashboardComponent /*implements OnInit*/ {
   }
   
 
-  onUserAdded() {
+  onUserAdded(user: User) {
     console.log('📢 Received userAdded event!');
-    // this.loadUsers();
+    this.loadUsers();
   }
   
 
@@ -62,20 +62,17 @@ export class DashboardComponent /*implements OnInit*/ {
     });
   }
 
-  loadUsers(newuser : User): void {
+  loadUsers(): void {
     console.log('📦 Loading users...');
-    this.users.push(newuser);
-    console.log('📥 Users loaded:', this.users);
-
-    // this.userService.getUsers().subscribe({
-    //   next: (data) => {
-    //     this.users = data;
-    //     console.log('📥 Users loaded:', this.users);
-    //   },
-    //   error: (err) => {
-    //     console.error('❌ Failed to load users:', err);
-    //   }
-    // });
+    this.userService.getUsers().subscribe({
+      next: (data) => {
+        this.users = data;
+        console.log('📥 Users loaded:', this.users);
+      },
+      error: (err) => {
+        console.error('❌ Failed to load users:', err);
+      }
+    });
   }
 
   getBadgeColor(role: any): string {
