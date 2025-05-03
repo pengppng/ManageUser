@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ManageG5.Server.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250503134839_SeedUserUpdate")]
+    partial class SeedUserUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,62 +58,6 @@ namespace ManageG5.Server.Migrations
                             CreatedAt = new DateTime(2024, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Company policies",
                             Name = "Employee Handbook"
-                        },
-                        new
-                        {
-                            Id = "10000000-0000-0000-0000-000000000003",
-                            CreatedAt = new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "2024 Q1 goals",
-                            Name = "Marketing Strategy"
-                        },
-                        new
-                        {
-                            Id = "10000000-0000-0000-0000-000000000004",
-                            CreatedAt = new DateTime(2024, 4, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Next year's projections",
-                            Name = "Budget Forecast"
-                        },
-                        new
-                        {
-                            Id = "10000000-0000-0000-0000-000000000005",
-                            CreatedAt = new DateTime(2024, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Infrastructure rules",
-                            Name = "IT Guidelines"
-                        },
-                        new
-                        {
-                            Id = "10000000-0000-0000-0000-000000000006",
-                            CreatedAt = new DateTime(2024, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Company-wide security practices",
-                            Name = "Security Policy"
-                        },
-                        new
-                        {
-                            Id = "10000000-0000-0000-0000-000000000007",
-                            CreatedAt = new DateTime(2024, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Recruitment targets",
-                            Name = "Hiring Plan"
-                        },
-                        new
-                        {
-                            Id = "10000000-0000-0000-0000-000000000008",
-                            CreatedAt = new DateTime(2024, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Board meetings notes",
-                            Name = "Meeting Minutes"
-                        },
-                        new
-                        {
-                            Id = "10000000-0000-0000-0000-000000000009",
-                            CreatedAt = new DateTime(2024, 9, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "New hire onboarding",
-                            Name = "Training Manual"
-                        },
-                        new
-                        {
-                            Id = "10000000-0000-0000-0000-000000000010",
-                            CreatedAt = new DateTime(2024, 10, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Corporate Social Responsibility update",
-                            Name = "CSR Report"
                         });
                 });
 
@@ -318,94 +265,6 @@ namespace ManageG5.Server.Migrations
                             RoleId = new Guid("bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb"),
                             UpdatedAt = new DateTime(2015, 10, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Username = "inaHogan007"
-                        },
-                        new
-                        {
-                            Id = "u00000000-0000-0000-0000-000000000003",
-                            CreatedAt = new DateTime(2020, 9, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "john@example.com",
-                            Name = "John Smith",
-                            PhoneNumber = "0911111111",
-                            RoleId = new Guid("bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb"),
-                            UpdatedAt = new DateTime(2020, 9, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Username = "johnnyS"
-                        },
-                        new
-                        {
-                            Id = "u00000000-0000-0000-0000-000000000004",
-                            CreatedAt = new DateTime(2021, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "sara@example.com",
-                            Name = "Sara Lee",
-                            PhoneNumber = "0922222222",
-                            RoleId = new Guid("cccccccc-cccc-cccc-cccc-cccccccccccc"),
-                            UpdatedAt = new DateTime(2021, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Username = "saraLee"
-                        },
-                        new
-                        {
-                            Id = "u00000000-0000-0000-0000-000000000005",
-                            CreatedAt = new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "bruce@example.com",
-                            Name = "Bruce Wayne",
-                            PhoneNumber = "0933333333",
-                            RoleId = new Guid("cccccccc-cccc-cccc-cccc-cccccccccccc"),
-                            UpdatedAt = new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Username = "batman"
-                        },
-                        new
-                        {
-                            Id = "u00000000-0000-0000-0000-000000000006",
-                            CreatedAt = new DateTime(2022, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "clark@example.com",
-                            Name = "Clark Kent",
-                            PhoneNumber = "0944444444",
-                            RoleId = new Guid("bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb"),
-                            UpdatedAt = new DateTime(2022, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Username = "superman"
-                        },
-                        new
-                        {
-                            Id = "u00000000-0000-0000-0000-000000000007",
-                            CreatedAt = new DateTime(2022, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "peter@example.com",
-                            Name = "Peter Parker",
-                            PhoneNumber = "0955555555",
-                            RoleId = new Guid("dddddddd-dddd-dddd-dddd-dddddddddddd"),
-                            UpdatedAt = new DateTime(2022, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Username = "spidey"
-                        },
-                        new
-                        {
-                            Id = "u00000000-0000-0000-0000-000000000008",
-                            CreatedAt = new DateTime(2022, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "tony@example.com",
-                            Name = "Tony Stark",
-                            PhoneNumber = "0966666666",
-                            RoleId = new Guid("aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"),
-                            UpdatedAt = new DateTime(2022, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Username = "ironman"
-                        },
-                        new
-                        {
-                            Id = "u00000000-0000-0000-0000-000000000009",
-                            CreatedAt = new DateTime(2022, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "diana@example.com",
-                            Name = "Diana Prince",
-                            PhoneNumber = "0977777777",
-                            RoleId = new Guid("bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb"),
-                            UpdatedAt = new DateTime(2022, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Username = "wonderwoman"
-                        },
-                        new
-                        {
-                            Id = "u00000000-0000-0000-0000-000000000010",
-                            CreatedAt = new DateTime(2022, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "steve@example.com",
-                            Name = "Steve Rogers",
-                            PhoneNumber = "0988888888",
-                            RoleId = new Guid("cccccccc-cccc-cccc-cccc-cccccccccccc"),
-                            UpdatedAt = new DateTime(2022, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Username = "cap"
                         });
                 });
 
