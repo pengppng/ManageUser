@@ -20,12 +20,8 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class DocumentComponent {
 
-  public documents: Document[] = [{ 
-    id: "testdoc", 
-    name: "Test", 
-    description: "Long Test",
-    createdAt: new Date(), 
-  }];
+  public documents: Document[] = []; 
+  //  [{      id: "testdoc",      name: "Test",      description: "Long Test",     createdAt: new Date(),    }];
   
 
   constructor(private documentsService: DocumentService) {
@@ -33,11 +29,15 @@ export class DocumentComponent {
   }
 
 
-  // ngOnInit(): void {
-  //   this.documentsService.getDocuments().subscribe((data: Document[]) => {
-  //     this.documents = data;
-  //   },);
-  // }
+  ngOnInit(): void {
+    this.documentsService.getDocuments().subscribe({next: documents => {
+      this.documents = documents;},
+      error: err => {
+        console.error('❌ Failed to load users:', err);
+      }
+    
+    },);
+  }
 
   addDocument(doc: Partial<Document>): void {
     this.documentsService.addDocument(doc as Document).subscribe({
