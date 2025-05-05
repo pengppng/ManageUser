@@ -10,7 +10,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { merge } from 'rxjs';
 import { MatSelectModule } from '@angular/material/select';
-
+import { UserService } from '../../../services/user.service';
+import { Users } from 'lucide-angular';
 
 export interface DialogData {
   name: string;
@@ -39,9 +40,15 @@ export interface DialogData {
   ],
 })
 export class DialogAddComponent {
-  roleOptions = ['Super Admin','Admin','Employee', 'Lorem Ipsum'];
   readonly addUserForm: FormGroup;
   readonly errorMessage = signal('');
+
+  roleTypes = [
+    { id: 'AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA', name: 'Super Admin' },
+    { id: 'BBBBBBBB-BBBB-BBBB-BBBB-BBBBBBBBBBBB', name: 'Admin' },
+    { id: 'CCCCCCCC-CCCC-CCCC-CCCC-CCCCCCCCCCCC', name: 'HR Admin' },
+    { id: 'DDDDDDDD-DDDD-DDDD-DDDD-DDDDDDDDDDDD', name: 'Employee' }
+  ];
 
   permissions = signal([
     { module: 'Super Admin', read: false, write: false, delete: false },
@@ -50,10 +57,13 @@ export class DialogAddComponent {
     { module: 'Lorem Ipsum', read: false, write: false, delete: false }
   ]);
 
-  constructor(private fb: FormBuilder , readonly dialogRef : MatDialogRef<DialogAddComponent>) {
+  constructor(private fb: FormBuilder , 
+    readonly dialogRef : MatDialogRef<DialogAddComponent>,
+    private userService : UserService
+  ) {
     
     this.addUserForm = this.fb.group({
-      userId: ['', Validators.required],
+      // userId: ['', Validators.required],
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -95,6 +105,20 @@ export class DialogAddComponent {
       };
       console.log('Result:', result);
       this.dialogRef.close(result);
+
+
+      // //return user id
+      // this.userService.createUser(Users).subscribe({
+      //   next: (createdUser) => {
+      //     console.log('User created with ID:', createdUser.id);
+      //     this.dialogRef.close(createdUser); // ส่งกลับไปให้ parent component
+      //   },
+      //   error: (err) => {
+      //     console.error('Error creating user:', err);
+      //     this.errorMessage.set('Error creating user.');
+      //   }
+      // });
+
     }
   }
 

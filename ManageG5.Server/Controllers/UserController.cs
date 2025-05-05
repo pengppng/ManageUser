@@ -41,11 +41,15 @@ namespace ManageG5.Server.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateUser([FromBody] User user)
         {
-           if (string.IsNullOrEmpty(user.Id))
-            {
-                user.Id = Guid.NewGuid().ToString(); // สร้างใหม่ถ้าไม่มีมา
-            }
+            user.Id = GenerateCustomId();
+            // if (await _context.Users.AnyAsync(u => u.Id == user.Id))
+            //     return Conflict("Duplicate ID");
 
+
+            if (user == null)
+                return BadRequest("User data is required");
+
+            
             user.CreatedAt = DateTime.UtcNow;
             user.UpdatedAt = DateTime.UtcNow;
 
@@ -53,6 +57,11 @@ namespace ManageG5.Server.Controllers
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
+        }
+
+        private string GenerateCustomId()
+        {
+            return "u" + Guid.NewGuid().ToString();
         }
 
 

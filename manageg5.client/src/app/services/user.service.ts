@@ -22,10 +22,15 @@ export class UserService {
     return this.configService.get<User>("/Users/${id}");
   }
   // User
-  addUser(payload: User): Observable<any> {
+  addUser(payload: any): Observable<any> {
     console.log('📤 POST to backend with:', payload);
-    return this.configService.post<User>('/Users', payload);
+    return this.configService.post<any>('/Users', payload);
   }
+
+  // createUser(user: any): Observable<any> {
+  //   return this.configService.post<any>(`/User`, user);
+  // }
+  
 
   updateUser(id: string, user: User): Observable<User> {
     return this.configService.put<User>("/Users/${ id }", user);

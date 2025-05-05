@@ -32,9 +32,13 @@ export class DashboardComponent /*implements OnInit*/ {
   ngOnInit(): void {
     this.userService.getUsers().subscribe({
       next: users => {
-        console.log('✅ Loaded from API:', users);
+        // console.log('✅ Loaded from API:', users);
         this.users = users;
-        console.log('📥 Loaded users from backend:', users);
+
+        console.log ('asdfghjkl;lkjhgwertyuioiuytrewjklzzxcvbnmmnbvcxzxvbnm,mnbzxcvb');
+        console.log('📥 Users loaded:', this.users[0]);
+
+        // console.log('📥 Loaded users from backend:', users);
       },
       error: err => {
         console.error('❌ Failed to load users:', err);
@@ -67,7 +71,8 @@ export class DashboardComponent /*implements OnInit*/ {
     this.userService.getUsers().subscribe({
       next: (data) => {
         this.users = data;
-        console.log('📥 Users loaded:', this.users);
+        console.log ('asdfghjkl;lkjhgwertyuioiuytrewjklzzxcvbnmmnbvcxzxvbnm,mnbzxcvb');
+        console.log('📥 Users loaded:', this.users[0].roleId);
       },
       error: (err) => {
         console.error('❌ Failed to load users:', err);

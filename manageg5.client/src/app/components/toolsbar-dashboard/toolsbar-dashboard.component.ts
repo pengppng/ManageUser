@@ -35,18 +35,19 @@ export class ToolsbarDashboardComponent {
 
     dialogRef.afterClosed().subscribe((result: any) => {
       if (result) {
-        const payload: User = {
-          id: result.userId,
-          name: result.firstName + ' ' + result.lastName,
-          email: result.email,
-          username: result.username,
-          phoneNumber: result.mobileNo,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          role: {
-            id: this.mapRoleToId(result.roleType),
-            name: result.roleType
-          }
+        const payload: any = {
+          Id: result.userId,
+          Name: result.firstName + ' ' + result.lastName,
+          Email: result.email,
+          Username: result.username,
+          PhoneNumber: result.mobileNo,
+          CreatedAt: new Date(),
+          UpdatedAt: new Date(),
+          RoleId: 'BBAAAAAA-AA-AAAA-AAAA-AAAAAAAAAAAA',
+          // Role: {
+          //   Id: 'AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA', 
+          //   Name: 'Super Admin' }
+          
         };
 
         // this.addUser.emit(payload)
@@ -66,13 +67,5 @@ export class ToolsbarDashboardComponent {
   
   }
 
-  private mapRoleToId(role: string): string {
-    switch (role) {
-      case 'Super Admin': return '1';
-      case 'Admin': return '2';
-      case 'Employee': return '3';
-      case 'Lorem Ipsum': return '4';
-      default: return '0';
-    }
-  }
+
 }

@@ -4,10 +4,10 @@
 <mat-dialog-content class="form-container">
   <form [formGroup]="addUserForm" class="form-grid">
 
-    <mat-form-field appearance="outline">
+    <!-- <mat-form-field appearance="outline">
       <mat-label>User ID</mat-label>
       <input matInput formControlName="userId" />
-    </mat-form-field>
+    </mat-form-field> -->
 
     <mat-form-field appearance="outline">
       <mat-label>First Name</mat-label>
@@ -30,10 +30,15 @@
       <input matInput formControlName="mobileNo" />
     </mat-form-field>
 
-    <mat-form-field appearance="outline">
-      <mat-label>Role Type</mat-label>
-      <input matInput formControlName="roleType" />
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Role</mat-label>
+      <mat-select formControlName="roleType" required>
+        <mat-option *ngFor="let role of roleTypes" [value]="role.id">
+          {{ role.name }}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
+    
 
     <mat-form-field appearance="outline">
       <mat-label>Username</mat-label>
