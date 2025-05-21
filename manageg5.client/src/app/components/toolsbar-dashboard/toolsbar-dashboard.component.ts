@@ -43,7 +43,7 @@ export class ToolsbarDashboardComponent {
           PhoneNumber: result.mobileNo,
           CreatedAt: new Date(),
           UpdatedAt: new Date(),
-          RoleId: 'BBAAAAAA-AA-AAAA-AAAA-AAAAAAAAAAAA',
+          RoleId: result.roleType,
           // Role: {
           //   Id: 'AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA', 
           //   Name: 'Super Admin' }

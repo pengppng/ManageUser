@@ -26,7 +26,11 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddCors(Action => Action.AddDefaultPolicy(config => config.AllowAnyOrigin()));
 var app = builder.Build();
-
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.Migrate();// SeedData.Initialize(db); // Uncomment ถ้ามีเมธอด seed
+}
 app.UseDefaultFiles();
 app.MapStaticAssets();
 

@@ -71,8 +71,7 @@ export class DashboardComponent /*implements OnInit*/ {
     this.userService.getUsers().subscribe({
       next: (data) => {
         this.users = data;
-        console.log ('asdfghjkl;lkjhgwertyuioiuytrewjklzzxcvbnmmnbvcxzxvbnm,mnbzxcvb');
-        console.log('📥 Users loaded:', this.users[0].roleId);
+        // console.log('📥 Users loaded:', this.users[0].roleId);
       },
       error: (err) => {
         console.error('❌ Failed to load users:', err);
