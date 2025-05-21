@@ -7,5 +7,5 @@ RUN npm run build --prod
 
 # Production stage
 FROM nginx:alpine
-COPY --from=build /app/dist/* /usr/share/nginx/html
+COPY --from=build /app/dist/manageg5.client /usr/share/nginx/html
 EXPOSE 80
