@@ -1,6 +1,15 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'node:18-alpine'
+        }
+    }
 
+    stage('Checkout Code') {
+        steps {
+            git credentialsId: 'jen-git', url: 'https://github.com/pengppng/ManageUser.git'
+        }
+    }
     stages {
         stage('Build Frontend') {
             steps {
@@ -60,7 +69,7 @@ pipeline {
             steps {
                 dir('ManageG5.Server') {
                     sh 'echo "Deploying backend..."'
-                    // Add your real deploy command here
+                    
                 }
             }
         }
