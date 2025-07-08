@@ -9,3 +9,6 @@ spec:
     - port: 80
       targetPort: 80
   type: NodePort
+kubectl get pods
+kubectl get svc
+minikube service manageg5-client-service
