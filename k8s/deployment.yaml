@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: manageg5-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: manageg5-client
+  template:
+    metadata:
+      labels:
+        app: manageg5-client
+    spec:
+      containers:
+        - name: manageg5-client
+          image: pannaporn/manageg5-client:latest
+          ports:
+            - containerPort: 80
