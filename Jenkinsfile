@@ -86,7 +86,7 @@ pipeline {
 
   environment {
     DOCKERHUB_USER = "pannaporn"   // ✅ ใส่ Docker Hub Username
-    IMAGE_NAME = "manageg5-client"
+    IMAGE_NAME = "manageg5.client:latest"
     KUBE_DEPLOY_DIR = "k8s"        // ✅ โฟลเดอร์ที่เก็บ YAML
   }
 
