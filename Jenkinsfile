@@ -4,14 +4,15 @@ pipeline {
             image 'node:18-alpine'
         }
     }
-
-    stage('Checkout Code') {
-        steps {
-            sh 'node -v && npm -v'
-            git credentialsId: 'jen-git', url: 'https://github.com/pengppng/ManageUser.git'
-        }
-    }
     stages {
+        
+        stage('Checkout Code') {
+            steps {
+            sh 'node -v && npm -v && '
+            git credentialsId: 'jen-git', url: 'https://github.com/pengppng/ManageUser.git'
+            }
+        }
+
         stage('Build Frontend') {
             steps {
                 dir('manageg5.client') {
