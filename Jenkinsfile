@@ -84,10 +84,14 @@
 pipeline {
   agent any
 
+  options {
+    buildDiscarder(logRotator(numToKeepStr: '10'))
+  }
+
   environment {
-    DOCKERHUB_USER = "pannaporn"   // ✅ ใส่ Docker Hub Username
+    DOCKERHUB_USER = "pannaporn"
     IMAGE_NAME = "manageg5.client:latest"
-    KUBE_DEPLOY_DIR = "k8s"        // ✅ โฟลเดอร์ที่เก็บ YAML
+    KUBE_DEPLOY_DIR = "k8s"
   }
 
   stages {
@@ -95,30 +99,12 @@ pipeline {
     stage('Checkout Code') {
       steps {
         git credentialsId: 'jen-git', url: 'https://github.com/pengppng/ManageUser.git'
-      }
-    }
-
-    stage('Build & Push Docker Image') {
-      steps {
+        sh 'ls'
+        echo "Hello, Jenkins!"
         script {
           docker.build("${DOCKERHUB_USER}/${IMAGE_NAME}")
           docker.withRegistry('', 'dockerhub-creds') {
             docker.image("${DOCKERHUB_USER}/${IMAGE_NAME}").push("latest")
-          }
-        }
-      }
-    }
-
-    stage('Deploy to Kubernetes') {
-      steps {
-        script {
-          withCredentials([string(credentialsId: 'kubeconfig', variable: 'KCFG')]) {
-            writeFile file: 'kubeconfig.yaml', text: KCFG
-            sh '''
-              export KUBECONFIG=$PWD/kubeconfig.yaml
-              kubectl apply -f ${KUBE_DEPLOY_DIR}/deployment.yaml
-              kubectl apply -f ${KUBE_DEPLOY_DIR}/service.yaml
-            '''
           }
         }
       }
