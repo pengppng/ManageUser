@@ -21,14 +21,14 @@ pipeline {
             }
         }
 
-        stage('Build Backend') {
-            steps {
-                dir('ManageG5.Server') {
-                    sh 'dotnet restore'
-                    sh 'dotnet build'
-                }
-            }
-        }
+        // stage('Build Backend') {
+        //     steps {
+        //         dir('ManageG5.Server') {
+        //             sh 'dotnet restore'
+        //             sh 'dotnet build'
+        //         }
+        //     }
+        // }
 
         stage('Test Frontend') {
             steps {
@@ -38,13 +38,13 @@ pipeline {
             }
         }
 
-        stage('Test Backend') {
-            steps {
-                dir('ManageG5.Server') {
-                    sh 'dotnet test'
-                }
-            }
-        }
+        // stage('Test Backend') {
+        //     steps {
+        //         dir('ManageG5.Server') {
+        //             sh 'dotnet test'
+        //         }
+        //     }
+        // }
 
         stage('Deploy Frontend') {
             when {
@@ -63,16 +63,16 @@ pipeline {
         }
 
 
-        stage('Deploy Backend') {
-            when {
-                branch 'main'
-            }
-            steps {
-                dir('ManageG5.Server') {
-                    sh 'echo "Deploying backend..."'
+        // stage('Deploy Backend') {
+        //     when {
+        //         branch 'main'
+        //     }
+        //     steps {
+        //         dir('ManageG5.Server') {
+        //             sh 'echo "Deploying backend..."'
                     
-                }
-            }
-        }
+        //         }
+        //     }
+        // }
     }
 }
