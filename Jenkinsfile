@@ -79,35 +79,45 @@
 //         // }
 //     }
 // }
-
-
 pipeline {
-  agent any
-
-  options {
-    buildDiscarder(logRotator(numToKeepStr: '10'))
-  }
-
-  environment {
-    DOCKERHUB_USER = "pannaporn"
-    IMAGE_NAME = "manageg5.client:latest"
-    KUBE_DEPLOY_DIR = "k8s"
-  }
-
-  stages {
-
-    stage('Checkout Code') {
-      steps {
-        git credentialsId: 'jen-git', url: 'https://github.com/pengppng/ManageUser.git'
-        sh 'ls'
-        echo "Hello, Jenkins!"
-        script {
-          docker.build("${DOCKERHUB_USER}/${IMAGE_NAME}")
-          docker.withRegistry('', 'dockerhub-creds') {
-            docker.image("${DOCKERHUB_USER}/${IMAGE_NAME}").push("latest")
-          }
+    agent any
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello from Jenkins!'
+            }
         }
-      }
     }
-  }
 }
+
+
+// pipeline {
+//   agent any
+
+//   options {
+//     buildDiscarder(logRotator(numToKeepStr: '10'))
+//   }
+
+//   environment {
+//     DOCKERHUB_USER = "pannaporn"
+//     IMAGE_NAME = "manageg5.client:latest"
+//     KUBE_DEPLOY_DIR = "k8s"
+//   }
+
+//   stages {
+
+//     stage('Checkout Code') {
+//       steps {
+//         git credentialsId: 'jen-git', url: 'https://github.com/pengppng/ManageUser.git'
+//         sh 'ls'
+//         echo "Hello, Jenkins!"
+//         script {
+//           docker.build("${DOCKERHUB_USER}/${IMAGE_NAME}")
+//           docker.withRegistry('', 'dockerhub-creds') {
+//             docker.image("${DOCKERHUB_USER}/${IMAGE_NAME}").push("latest")
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
