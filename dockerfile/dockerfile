@@ -1,8 +1,0 @@
-FROM jenkins/inbound-agent:latest
-
-USER root
-
-# Install docker CLI - for ARM (aarch64)
-RUN apt-get update && apt-get install -y docker.io
-
-USER jenkins
